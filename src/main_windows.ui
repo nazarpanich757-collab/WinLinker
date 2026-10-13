@@ -30,7 +30,7 @@
     <normaloff>:/icon/winlinker.svg</normaloff>:/icon/winlinker.svg</iconset>
   </property>
   <property name="locale">
-   <locale language="English" country="World"/>
+   <locale language="English" country="UnitedStates"/>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <property name="leftMargin">
@@ -47,6 +47,9 @@
    </property>
    <item>
     <widget class="QLabel" name="label_Title">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
      <property name="sizePolicy">
       <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
        <horstretch>0</horstretch>
@@ -59,17 +62,14 @@
       </font>
      </property>
      <property name="text">
-      <string>Create a Link</string>
+      <string>Создать ссылку</string>
      </property>
     </widget>
    </item>
    <item>
     <spacer name="verticalSpacer_1">
-     <property name="orientation">
-      <enum>Qt::Orientation::Vertical</enum>
-     </property>
      <property name="sizeType">
-      <enum>QSizePolicy::Policy::Fixed</enum>
+      <enum>QSizePolicy::Fixed</enum>
      </property>
      <property name="sizeHint" stdset="0">
       <size>
@@ -88,7 +88,7 @@
       </sizepolicy>
      </property>
      <property name="title">
-      <string>Destination</string>
+      <string>Откуда</string>
      </property>
      <property name="flat">
       <bool>true</bool>
@@ -106,7 +106,7 @@
       <item row="0" column="1">
        <widget class="QPushButton" name="pushButton_SelectDestinationFile">
         <property name="text">
-         <string>File</string>
+         <string>Файл</string>
         </property>
        </widget>
       </item>
@@ -126,7 +126,7 @@
       <item row="0" column="2">
        <widget class="QPushButton" name="pushButton_SelectDestinationFolder">
         <property name="text">
-         <string>Folder</string>
+         <string>Папка</string>
         </property>
        </widget>
       </item>
@@ -135,11 +135,8 @@
    </item>
    <item>
     <spacer name="verticalSpacer_2">
-     <property name="orientation">
-      <enum>Qt::Orientation::Vertical</enum>
-     </property>
      <property name="sizeType">
-      <enum>QSizePolicy::Policy::Fixed</enum>
+      <enum>QSizePolicy::Fixed</enum>
      </property>
      <property name="sizeHint" stdset="0">
       <size>
@@ -164,7 +161,7 @@
       </size>
      </property>
      <property name="title">
-      <string>Entrance</string>
+      <string>Куда</string>
      </property>
      <property name="flat">
       <bool>true</bool>
@@ -182,17 +179,14 @@
       <item row="4" column="1">
        <widget class="QPushButton" name="pushButton_SelectEntranceFolder">
         <property name="text">
-         <string>Select</string>
+         <string>Выбрать</string>
         </property>
        </widget>
       </item>
       <item row="2" column="0" colspan="2">
        <spacer name="verticalSpacer_3">
-        <property name="orientation">
-         <enum>Qt::Orientation::Vertical</enum>
-        </property>
         <property name="sizeType">
-         <enum>QSizePolicy::Policy::Fixed</enum>
+         <enum>QSizePolicy::Fixed</enum>
         </property>
         <property name="sizeHint" stdset="0">
          <size>
@@ -205,34 +199,7 @@
       <item row="3" column="0">
        <widget class="QLabel" name="label_EntranceLocation">
         <property name="text">
-         <string>Folder</string>
-        </property>
-       </widget>
-      </item>
-      <item row="1" column="0">
-       <widget class="QLineEdit" name="lineEdit_EntranceName">
-        <property name="minimumSize">
-         <size>
-          <width>0</width>
-          <height>21</height>
-         </size>
-        </property>
-        <property name="toolTip">
-         <string>Name of the link</string>
-        </property>
-       </widget>
-      </item>
-      <item row="6" column="0" colspan="3">
-       <widget class="QLabel" name="label_ActionResult">
-        <property name="alignment">
-         <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
-        </property>
-       </widget>
-      </item>
-      <item row="0" column="0">
-       <widget class="QLabel" name="label_EntranceName">
-        <property name="text">
-         <string>Name</string>
+         <string>Папка размещения</string>
         </property>
        </widget>
       </item>
@@ -246,6 +213,13 @@
         </property>
         <property name="toolTip">
          <string>Path to the folder where the the link is placed</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="0">
+       <widget class="QLabel" name="label_EntranceName">
+        <property name="text">
+         <string>Имя</string>
         </property>
        </widget>
       </item>
@@ -271,6 +245,19 @@
         </property>
        </widget>
       </item>
+      <item row="1" column="0">
+       <widget class="QLineEdit" name="lineEdit_EntranceName">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>21</height>
+         </size>
+        </property>
+        <property name="toolTip">
+         <string>Name of the link</string>
+        </property>
+       </widget>
+      </item>
       <item row="1" column="2" rowspan="4">
        <widget class="QPushButton" name="pushButton_Create">
         <property name="sizePolicy">
@@ -280,17 +267,14 @@
          </sizepolicy>
         </property>
         <property name="text">
-         <string>Create</string>
+         <string>Создать</string>
         </property>
        </widget>
       </item>
       <item row="5" column="0" colspan="3">
        <spacer name="verticalSpacer">
-        <property name="orientation">
-         <enum>Qt::Orientation::Vertical</enum>
-        </property>
         <property name="sizeType">
-         <enum>QSizePolicy::Policy::Fixed</enum>
+         <enum>QSizePolicy::Fixed</enum>
         </property>
         <property name="sizeHint" stdset="0">
          <size>
@@ -299,6 +283,9 @@
          </size>
         </property>
        </spacer>
+      </item>
+      <item row="6" column="0" colspan="3">
+       <widget class="QLabel" name="label_ActionResult"/>
       </item>
      </layout>
     </widget>
