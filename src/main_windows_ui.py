@@ -3,7 +3,7 @@
 ################################################################################
 ## Form generated from reading UI file 'main_windows.ui'
 ##
-## Created by: Qt User Interface Compiler version 6.9.0
+## Created by: Qt User Interface Compiler version 6.12.0
 ##
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
@@ -30,12 +30,13 @@ class Ui_WinLinker(object):
         icon = QIcon()
         icon.addFile(u":/icon/winlinker.svg", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
         WinLinker.setWindowIcon(icon)
-        WinLinker.setLocale(QLocale(QLocale.English, QLocale.World))
+        WinLinker.setLocale(QLocale(QLocale.English, QLocale.UnitedStates))
         self.verticalLayout = QVBoxLayout(WinLinker)
         self.verticalLayout.setObjectName(u"verticalLayout")
         self.verticalLayout.setContentsMargins(30, 30, 30, 75)
         self.label_Title = QLabel(WinLinker)
         self.label_Title.setObjectName(u"label_Title")
+        self.label_Title.setEnabled(True)
         sizePolicy = QSizePolicy(QSizePolicy.Policy.Preferred, QSizePolicy.Policy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -47,7 +48,7 @@ class Ui_WinLinker(object):
 
         self.verticalLayout.addWidget(self.label_Title)
 
-        self.verticalSpacer_1 = QSpacerItem(0, 30, QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Fixed)
+        self.verticalSpacer_1 = QSpacerItem(0, 30, QSizePolicy.Policy.Fixed, QSizePolicy.Policy.Minimum)
 
         self.verticalLayout.addItem(self.verticalSpacer_1)
 
@@ -82,7 +83,7 @@ class Ui_WinLinker(object):
 
         self.verticalLayout.addWidget(self.groupBox_Destination)
 
-        self.verticalSpacer_2 = QSpacerItem(0, 16, QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Fixed)
+        self.verticalSpacer_2 = QSpacerItem(0, 16, QSizePolicy.Policy.Fixed, QSizePolicy.Policy.Minimum)
 
         self.verticalLayout.addItem(self.verticalSpacer_2)
 
@@ -101,7 +102,7 @@ class Ui_WinLinker(object):
 
         self.gridLayout_Entrance.addWidget(self.pushButton_SelectEntranceFolder, 4, 1, 1, 1)
 
-        self.verticalSpacer_3 = QSpacerItem(0, 6, QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Fixed)
+        self.verticalSpacer_3 = QSpacerItem(0, 6, QSizePolicy.Policy.Fixed, QSizePolicy.Policy.Minimum)
 
         self.gridLayout_Entrance.addItem(self.verticalSpacer_3, 2, 0, 1, 2)
 
@@ -110,28 +111,16 @@ class Ui_WinLinker(object):
 
         self.gridLayout_Entrance.addWidget(self.label_EntranceLocation, 3, 0, 1, 1)
 
-        self.lineEdit_EntranceName = QLineEdit(self.groupBox_Entrance)
-        self.lineEdit_EntranceName.setObjectName(u"lineEdit_EntranceName")
-        self.lineEdit_EntranceName.setMinimumSize(QSize(0, 21))
-
-        self.gridLayout_Entrance.addWidget(self.lineEdit_EntranceName, 1, 0, 1, 1)
-
-        self.label_ActionResult = QLabel(self.groupBox_Entrance)
-        self.label_ActionResult.setObjectName(u"label_ActionResult")
-        self.label_ActionResult.setAlignment(Qt.AlignmentFlag.AlignRight|Qt.AlignmentFlag.AlignTrailing|Qt.AlignmentFlag.AlignVCenter)
-
-        self.gridLayout_Entrance.addWidget(self.label_ActionResult, 6, 0, 1, 3)
-
-        self.label_EntranceName = QLabel(self.groupBox_Entrance)
-        self.label_EntranceName.setObjectName(u"label_EntranceName")
-
-        self.gridLayout_Entrance.addWidget(self.label_EntranceName, 0, 0, 1, 1)
-
         self.lineEdit_EntranceFolder = QLineEdit(self.groupBox_Entrance)
         self.lineEdit_EntranceFolder.setObjectName(u"lineEdit_EntranceFolder")
         self.lineEdit_EntranceFolder.setMinimumSize(QSize(0, 21))
 
         self.gridLayout_Entrance.addWidget(self.lineEdit_EntranceFolder, 4, 0, 1, 1)
+
+        self.label_EntranceName = QLabel(self.groupBox_Entrance)
+        self.label_EntranceName.setObjectName(u"label_EntranceName")
+
+        self.gridLayout_Entrance.addWidget(self.label_EntranceName, 0, 0, 1, 1)
 
         self.comboBox_LinkType = QComboBox(self.groupBox_Entrance)
         self.comboBox_LinkType.setObjectName(u"comboBox_LinkType")
@@ -141,6 +130,12 @@ class Ui_WinLinker(object):
         self.comboBox_LinkType.setMaximumSize(QSize(16777215, 22))
 
         self.gridLayout_Entrance.addWidget(self.comboBox_LinkType, 1, 1, 1, 1)
+
+        self.lineEdit_EntranceName = QLineEdit(self.groupBox_Entrance)
+        self.lineEdit_EntranceName.setObjectName(u"lineEdit_EntranceName")
+        self.lineEdit_EntranceName.setMinimumSize(QSize(0, 21))
+
+        self.gridLayout_Entrance.addWidget(self.lineEdit_EntranceName, 1, 0, 1, 1)
 
         self.pushButton_Create = QPushButton(self.groupBox_Entrance)
         self.pushButton_Create.setObjectName(u"pushButton_Create")
@@ -152,9 +147,14 @@ class Ui_WinLinker(object):
 
         self.gridLayout_Entrance.addWidget(self.pushButton_Create, 1, 2, 4, 1)
 
-        self.verticalSpacer = QSpacerItem(0, 6, QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Fixed)
+        self.verticalSpacer = QSpacerItem(0, 6, QSizePolicy.Policy.Fixed, QSizePolicy.Policy.Minimum)
 
         self.gridLayout_Entrance.addItem(self.verticalSpacer, 5, 0, 1, 3)
+
+        self.label_ActionResult = QLabel(self.groupBox_Entrance)
+        self.label_ActionResult.setObjectName(u"label_ActionResult")
+
+        self.gridLayout_Entrance.addWidget(self.label_ActionResult, 6, 0, 1, 3)
 
 
         self.verticalLayout.addWidget(self.groupBox_Entrance)
@@ -174,23 +174,23 @@ class Ui_WinLinker(object):
 
     def retranslateUi(self, WinLinker):
         WinLinker.setWindowTitle(QCoreApplication.translate("WinLinker", u"WinLinker", None))
-        self.label_Title.setText(QCoreApplication.translate("WinLinker", u"Create a Link", None))
-        self.groupBox_Destination.setTitle(QCoreApplication.translate("WinLinker", u"Destination", None))
-        self.pushButton_SelectDestinationFile.setText(QCoreApplication.translate("WinLinker", u"File", None))
+        self.label_Title.setText(QCoreApplication.translate("WinLinker", u"\u0421\u043e\u0437\u0434\u0430\u0442\u044c \u0441\u0441\u044b\u043b\u043a\u0443", None))
+        self.groupBox_Destination.setTitle(QCoreApplication.translate("WinLinker", u"\u041e\u0442\u043a\u0443\u0434\u0430", None))
+        self.pushButton_SelectDestinationFile.setText(QCoreApplication.translate("WinLinker", u"\u0424\u0430\u0439\u043b", None))
 #if QT_CONFIG(tooltip)
         self.lineEdit_Destination.setToolTip(QCoreApplication.translate("WinLinker", u"Path to the destination", None))
 #endif // QT_CONFIG(tooltip)
-        self.pushButton_SelectDestinationFolder.setText(QCoreApplication.translate("WinLinker", u"Folder", None))
-        self.groupBox_Entrance.setTitle(QCoreApplication.translate("WinLinker", u"Entrance", None))
-        self.pushButton_SelectEntranceFolder.setText(QCoreApplication.translate("WinLinker", u"Select", None))
-        self.label_EntranceLocation.setText(QCoreApplication.translate("WinLinker", u"Folder", None))
-#if QT_CONFIG(tooltip)
-        self.lineEdit_EntranceName.setToolTip(QCoreApplication.translate("WinLinker", u"Name of the link", None))
-#endif // QT_CONFIG(tooltip)
-        self.label_EntranceName.setText(QCoreApplication.translate("WinLinker", u"Name", None))
+        self.pushButton_SelectDestinationFolder.setText(QCoreApplication.translate("WinLinker", u"\u041f\u0430\u043f\u043a\u0430", None))
+        self.groupBox_Entrance.setTitle(QCoreApplication.translate("WinLinker", u"\u041a\u0443\u0434\u0430", None))
+        self.pushButton_SelectEntranceFolder.setText(QCoreApplication.translate("WinLinker", u"\u0412\u044b\u0431\u0440\u0430\u0442\u044c", None))
+        self.label_EntranceLocation.setText(QCoreApplication.translate("WinLinker", u"\u041f\u0430\u043f\u043a\u0430 \u0440\u0430\u0437\u043c\u0435\u0449\u0435\u043d\u0438\u044f", None))
 #if QT_CONFIG(tooltip)
         self.lineEdit_EntranceFolder.setToolTip(QCoreApplication.translate("WinLinker", u"Path to the folder where the the link is placed", None))
 #endif // QT_CONFIG(tooltip)
-        self.pushButton_Create.setText(QCoreApplication.translate("WinLinker", u"Create", None))
+        self.label_EntranceName.setText(QCoreApplication.translate("WinLinker", u"\u0418\u043c\u044f", None))
+#if QT_CONFIG(tooltip)
+        self.lineEdit_EntranceName.setToolTip(QCoreApplication.translate("WinLinker", u"Name of the link", None))
+#endif // QT_CONFIG(tooltip)
+        self.pushButton_Create.setText(QCoreApplication.translate("WinLinker", u"\u0421\u043e\u0437\u0434\u0430\u0442\u044c", None))
     # retranslateUi
 
